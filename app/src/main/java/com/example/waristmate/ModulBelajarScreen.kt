@@ -183,7 +183,7 @@ fun ModulBelajarScreen(
                 items(babList) { bab ->
                     BabItem(
                         babText = stringResource(id = bab.titleResId),
-                        onClick = { navController.navigate(bab.route) }
+                        onClick = { navController.navigate("bab_detail/${bab.id}") }
                     )
                 }
             }

@@ -16,7 +16,7 @@
     <string name="tabel_button">Tabel Warisan</string>
     <string name="modul_button">Modul Pembelajaran</string>
     <string name="dalil_button">Dalil Al - Qur\'an</string>
-    <string name="glosarium_button">Tabel Glosarium</string>
+    <string name="glosarium_button">Glosarium</string>
     <!--    -->
 
     <!--  Modul Library  -->
@@ -33,6 +33,21 @@
     <string name="bab_10">Bab 10 : Koreksi Masalah</string>
     <string name="bab_11">Bab 11 : Penyesuaian : Ar-Radd</string>
     <string name="bab_12">Bab 12 : Masalah Dalam Pembagian</string>
+    <!--    -->
+
+    <!--  Modul Title  -->
+    <string name="bab_1_title">Pendahuluan Ilmu Waris</string>
+    <string name="bab_2_title">Harta Waris</string>
+    <string name="bab_3_title">Sebab - Sebab Warisan</string>
+    <string name="bab_4_title">Pembagian Yang Ditentukan</string>
+    <string name="bab_5_title">Ahli Waris : Ta\'sib</string>
+    <string name="bab_6_title">Ahli Waris : Hajb</string>
+    <string name="bab_7_title">Tabel Waris</string>
+    <string name="bab_8_title">Metode Dasar Pembagian</string>
+    <string name="bab_9_title">Penyesuaian : Al-\'Aul</string>
+    <string name="bab_10_title">Koreksi Masalah</string>
+    <string name="bab_11_title">Penyesuaian : Ar-Radd</string>
+    <string name="bab_12_title">Masalah Dalam Pembagian</string>
     <!--    -->
 
     <!--  navbar bottom  -->

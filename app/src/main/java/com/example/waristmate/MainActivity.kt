@@ -42,6 +42,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.NavController
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +64,19 @@ class MainActivity : ComponentActivity() {
                             ModulBelajarScreen(navController = navController)
                         }
                         composable("glosarium_screen") {
-                            ModulBelajarScreen(navController = navController)
+                            GlosariumScreen(navController = navController)
+                        }
+                        composable(
+                            route = "bab_detail/{babId}",
+                            arguments = listOf(navArgument("babId") { type = NavType.IntType } )
+                        ) {
+                            backStackEntry ->
+                            val babId =  backStackEntry.arguments?.getInt("babId")
+                            if (babId != null) {
+                                BabDetailScreen(babId, navController = navController)
+                            } else {
+                                Text("Error: Bab tidak ditemukan")
+                            }
                         }
                     }
                 }
