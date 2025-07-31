@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Waristmate</string>
+    <string name="app_name_capt">WARISTMATE</string>
+
+    <!--  Welcome Page  -->
+    <string name="header_welcome_page">Akses Modul Faraidh \nKapan Saja</string>
+    <string name="text_welcome_page">Aplikasi lengkap untuk mempelajari hukum \nwaris islam (faraidh) secara terstruktur, \n interaktif, dan mudah dipahami</string>
+    <!--    -->
+
+    <!--  Home Page  -->
+    <string name="salam_compose">Assalamu\'alaikum,</string>
+    <string name="welcome_compose">Selamat Datang!</string>
+    <string name="greeting_compose">Hai Pembelajar Faraidh,</string>
+    <string name="ayo_lanjut_compose">Ayo Lanjut Belajar!</string>
+    <string name="lanjut_button">Lanjut Belajar</string>
+    <string name="tabel_button">Tabel Warisan</string>
+    <string name="modul_button">Modul Pembelajaran</string>
+    <string name="dalil_button">Dalil Al - Qur\'an</string>
+    <string name="glosarium_button">Tabel Glosarium</string>
+    <!--    -->
+
+    <!--  Modul Library  -->
+    <string name="bab_header">Modul Belajar</string>
+    <string name="bab_1">Bab 1 : Pendahuluan Ilmu Waris</string>
+    <string name="bab_2">Bab 2 : Harta Waris</string>
+    <string name="bab_3">Bab 3 : Sebab - Sebab Warisan</string>
+    <string name="bab_4">Bab 4 : Pembagian Yang Ditentukan</string>
+    <string name="bab_5">Bab 5 : Ahli Waris : Ta\'sib</string>
+    <string name="bab_6">Bab 6 : Ahli Waris : Hajb</string>
+    <string name="bab_7">Bab 7 : Tabel Waris</string>
+    <string name="bab_8">Bab 8 : Metode Dasar Pembagian</string>
+    <string name="bab_9">Bab 9 : Penyesuaian : Al-\'Aul</string>
+    <string name="bab_10">Bab 10 : Koreksi Masalah</string>
+    <string name="bab_11">Bab 11 : Penyesuaian : Ar-Radd</string>
+    <string name="bab_12">Bab 12 : Masalah Dalam Pembagian</string>
+    <!--    -->
+
+    <!--  navbar bottom  -->
+    <string name="modul">modul</string>
+    <string name="home">home</string>
+    <string name="tabel">tabel</string>
+    <!--    -->
+</resources>
