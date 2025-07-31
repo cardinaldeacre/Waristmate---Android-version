@@ -23,10 +23,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.waristmate.ui.theme.WaristmateTheme
-import com.example.waristmate.ui.theme.DarkGreen // Pastikan ini di-import dari ui.theme
-import com.example.waristmate.ui.theme.Green // Pastikan ini di-import dari ui.theme
-import com.example.waristmate.ui.theme.Whites // Pastikan ini di-import dari ui.theme
-import com.example.waristmate.ui.theme.Tosca // Pastikan ini di-import dari ui.theme
+import com.example.waristmate.ui.theme.DarkGreen
+import com.example.waristmate.ui.theme.Green
+import com.example.waristmate.ui.theme.Whites
+import com.example.waristmate.ui.theme.Tosca
 
 // --- Data Model Bab ---
 data class Bab(val id: Int, val titleResId: Int, val route: String)
@@ -87,9 +87,9 @@ fun BabItem(
     }
 }
 
-// --- Komponen Reusable: Item Navigasi Bawah ---
+
 @Composable
-fun BottomNavItem(
+fun BottomNavModul(
     iconResId: Int,
     labelResId: Int,
     isSelected: Boolean,
@@ -102,6 +102,7 @@ fun BottomNavItem(
         modifier = modifier
             .clip(RoundedCornerShape(18.dp))
             .background(if (isSelected) DarkGreen else Green)
+            .width(120.dp)
             .height(60.dp)
             .padding(top = 5.dp)
             .clickable(onClick = onClick)
@@ -207,21 +208,21 @@ fun ModulBelajarScreen(
                 horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                BottomNavItem(
+                BottomNavModul(
                     iconResId = R.drawable.books,
                     labelResId = R.string.modul,
                     isSelected = true,
-                    onClick = {  }
+                    onClick = { navController.navigate("list_module") }
                 )
-                BottomNavItem(
+                BottomNavModul(
                     iconResId = R.drawable.home_button_white,
                     labelResId = R.string.home,
                     isSelected = false,
                     onClick = { navController.navigate("home_screen") }
                 )
-                BottomNavItem(
+                BottomNavModul(
                     iconResId = R.drawable.book_stand,
-                    labelResId = R.string.glosarium_button,
+                    labelResId = R.string.modul,
                     isSelected = false,
                     onClick = { navController.navigate("glosarium_screen") }
                 )
