@@ -59,7 +59,10 @@ class MainActivity : ComponentActivity() {
                             HomeScreen(navController = navController)
                         }
                         composable("list_module") {
-                            ModulBelajar(navController = navController)
+                            ModulBelajarScreen(navController = navController)
+                        }
+                        composable("glosarium_screen") {
+                            ModulBelajarScreen(navController = navController)
                         }
                     }
                 }

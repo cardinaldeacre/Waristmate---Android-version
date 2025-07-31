@@ -55,6 +55,40 @@ import com.example.waristmate.ui.theme.Gold
 import com.example.waristmate.ui.theme.Tosca
 
 @Composable
+fun BottomNavHome(
+    iconResId: Int,
+    labelResId: Int,
+    isSelected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+            .clip(RoundedCornerShape(18.dp))
+            .background(if (isSelected) DarkGreen else Green)
+            .height(60.dp)
+            .width(120.dp)
+            .padding(top = 5.dp)
+            .clickable(onClick = onClick)
+    ) {
+        Image(
+            painter = painterResource(id = iconResId),
+            contentDescription = stringResource(id = labelResId),
+            modifier = Modifier.size(32.dp)
+        )
+        Text(
+            text = stringResource(id = labelResId),
+            color = Whites,
+            fontWeight = FontWeight.Medium,
+            fontSize = 10.sp,
+            lineHeight = 1.sp
+        )
+    }
+}
+
+@Composable
 fun HomeScreen(
     navController: NavController,
     modifier: Modifier = Modifier
@@ -361,11 +395,8 @@ fun HomeScreen(
                     )
                 }
             }
-
-
         }
-
-        // navbar bottom
+        // --- Navbar Bottom ---
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -381,86 +412,37 @@ fun HomeScreen(
                     )
                     .fillMaxWidth()
                     .background(Green)
-                    .padding(start = 20.dp, top = 10.dp, bottom = 15.dp, end = 20.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
+                    .padding(horizontal = 20.dp, vertical = 10.dp),
+                horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Column(
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = modifier
-                        .clip(RoundedCornerShape(18.dp))
-                        .background(Green)
-                        .width(120.dp)
-                        .height(60.dp)
-                        .padding(top = 5.dp)
-                        .clickable{ navController.navigate("list_module")}
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.books),
-                        contentDescription = "modul logo",
-                        modifier = modifier
-                            .size(32.dp)
-                    )
-                    Text(
-                        text = stringResource(id = R.string.modul),
-                        color = Whites,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 1.sp
-                    )
-                }
-                Column(
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = modifier
-                        .clip(RoundedCornerShape(18.dp))
-                        .background(DarkGreen)
-                        .width(120.dp)
-                        .height(60.dp)
-                        .padding(top = 5.dp)
-                        .clickable{ navController.navigate("")}
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.home_button_white),
-                        contentDescription = "home logo",
-                        modifier = modifier
-                            .size(36.dp)
-                    )
-                    Text(
-                        text = stringResource(id = R.string.home),
-                        color = Whites,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 1.sp
-                    )
-                }
-                Column(
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = modifier
-                        .clip(RoundedCornerShape(18.dp))
-                        .background(Green)
-                        .width(120.dp)
-                        .height(60.dp)
-                        .padding(top = 5.dp)
-                        .clickable{ navController.navigate("")}
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.book_stand),
-                        contentDescription = "tabel logo",
-                        modifier = modifier
-                            .size(32.dp)
-                    )
-                    Text(
-                        text = stringResource(id = R.string.modul),
-                        color = Whites,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 1.sp
-                    )
-                }
+                BottomNavHome(
+                    iconResId = R.drawable.books,
+                    labelResId = R.string.modul,
+                    isSelected = false,
+                    onClick = { navController.navigate("list_module") }
+                )
+                BottomNavHome(
+                    iconResId = R.drawable.home_button_white,
+                    labelResId = R.string.home,
+                    isSelected = true,
+                    onClick = { navController.navigate("home_screen") }
+                )
+                BottomNavHome(
+                    iconResId = R.drawable.book_stand,
+                    labelResId = R.string.modul,
+                    isSelected = false,
+                    onClick = { navController.navigate("glosarium_screen") }
+                )
             }
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 360, heightDp = 640)
+@Composable
+fun HomeScreenPreview() {
+    WaristmateTheme {
+        HomeScreen(navController = NavController(androidx.compose.ui.platform.LocalContext.current))
     }
 }
