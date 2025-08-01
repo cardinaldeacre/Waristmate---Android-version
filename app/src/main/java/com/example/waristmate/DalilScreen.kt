@@ -116,7 +116,7 @@ fun DalilScreen(
                         .verticalScroll(rememberScrollState())
                 )
                 Text(
-                    text = stringResource(id = R.string.tabel_button),
+                    text = stringResource(id = R.string.dalil_title),
                     color = Whites,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,

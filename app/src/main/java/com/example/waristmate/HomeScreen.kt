@@ -230,7 +230,7 @@ fun HomeScreen(
                                 .width(150.dp)
                         ) {
                             Text(
-                                text = stringResource(id = R.string.lanjut_button),
+                                text = stringResource(id = R.string.dalil_title),
                                 color = Whites,
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.SemiBold,
