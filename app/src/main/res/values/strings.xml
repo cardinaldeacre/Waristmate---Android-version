@@ -15,7 +15,7 @@
     <string name="lanjut_button">Lanjut Belajar</string>
     <string name="tabel_button">Tabel Warisan</string>
     <string name="modul_button">Modul Pembelajaran</string>
-    <string name="dalil_button">Dalil Al - Qur\'an</string>
+    <string name="dalil_button">Dalil Al-Qur\'an &amp; Hadits</string>
     <string name="glosarium_button">Glosarium</string>
     <!--    -->
 
@@ -48,6 +48,7 @@
     <string name="bab_10_title">Koreksi Masalah</string>
     <string name="bab_11_title">Penyesuaian : Ar-Radd</string>
     <string name="bab_12_title">Masalah Dalam Pembagian</string>
+    <string name="dalil_title">Dalil</string>
     <!--    -->
 
     <!--  navbar bottom  -->

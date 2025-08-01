@@ -1,0 +1,42 @@
+[33mcommit 34c942fde6f16c11042405273fcc20ee07bbd45d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: cardinaldeacre <cardinaldeacre@gmail.com>
+Date:   Fri Aug 1 14:03:28 2025 +0700
+
+    update zoom materi
+
+[33mcommit 5e640299ffe4431497f0fc20c3355c37d8809d76[m
+Author: cardinaldeacre <cardinaldeacre@gmail.com>
+Date:   Thu Jul 31 23:09:26 2025 +0700
+
+    update materi bab
+
+[33mcommit 80b6fa01c16872ef1b49c9996f02d026c68c5f9a[m
+Author: cardinaldeacre <cardinaldeacre@gmail.com>
+Date:   Thu Jul 31 17:34:51 2025 +0700
+
+    add glosarium
+
+[33mcommit b2274851c0a6d89710c1097fbca49d7ef67af9e2[m
+Merge: 6f79754 a5c3a03
+Author: cardinaldeacre <cardinaldeacre@gmail.com>
+Date:   Thu Jul 31 17:33:18 2025 +0700
+
+    fixing list module
+
+[33mcommit 6f79754d2d424cb21b5163961d2988e858fc2a56[m
+Author: cardinaldeacre <cardinaldeacre@gmail.com>
+Date:   Thu Jul 31 16:49:25 2025 +0700
+
+    Initializing
+
+[33mcommit a5c3a031ef43289ce7325c9cb16874599b7ca237[m
+Author: Iqbal Maulana <135620738+cardinaldeacre@users.noreply.github.com>
+Date:   Thu Jul 31 16:46:32 2025 +0700
+
+    Update README.md
+
+[33mcommit 2e6c714fb8e21afd17c1a3ab986ac03e23420d0a[m
+Author: Iqbal Maulana <135620738+cardinaldeacre@users.noreply.github.com>
+Date:   Thu Jul 31 16:46:14 2025 +0700
+
+    Initial commit

@@ -63,8 +63,11 @@ class MainActivity : ComponentActivity() {
                         composable("list_module") {
                             ModulBelajarScreen(navController = navController)
                         }
-                        composable("glosarium_screen") {
-                            GlosariumScreen(navController = navController)
+                        composable("table_screen") {
+                            TableScreen(navController = navController)
+                        }
+                        composable("dalil_screen") {
+                            DalilScreen(navController = navController)
                         }
                         composable(
                             route = "bab_detail/{babId}",

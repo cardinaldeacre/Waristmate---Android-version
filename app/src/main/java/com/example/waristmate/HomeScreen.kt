@@ -55,7 +55,7 @@ import com.example.waristmate.ui.theme.Gold
 import com.example.waristmate.ui.theme.Tosca
 
 @Composable
-fun BottomNavHome(
+fun BottomNav(
     iconResId: Int,
     labelResId: Int,
     isSelected: Boolean,
@@ -237,6 +237,7 @@ fun HomeScreen(
                                 modifier = Modifier
                                     .padding(horizontal = 20.dp, vertical = 6.dp)
                                     .align(alignment = Alignment.Center)
+                                    .clickable{ navController.navigate("dalil_screen")}
                             )
                         }
                         Spacer(
@@ -264,6 +265,7 @@ fun HomeScreen(
                                 modifier = Modifier
                                     .padding(horizontal = 20.dp, vertical = 6.dp)
                                     .align(alignment = Alignment.Center)
+                                    .clickable{ navController.navigate("table_screen")}
                             )
                         }
                     }
@@ -322,12 +324,13 @@ fun HomeScreen(
                         .clip(RoundedCornerShape(20.dp))
                         .padding(vertical = 5.dp, horizontal = 6.dp)
                         .fillMaxWidth()
+                        .clickable{ navController.navigate("dalil_screen")}
                         .border(
                             width = 2.dp,
                             color = Green,
                             shape = RoundedCornerShape(20.dp)
                         ),
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Column(
                         modifier = Modifier
@@ -361,6 +364,7 @@ fun HomeScreen(
                         .clip(RoundedCornerShape(20.dp))
                         .padding(vertical = 12.dp, horizontal = 6.dp)
                         .fillMaxWidth()
+                        .clickable{ navController.navigate("table_screen")}
                         .border(
                             width = 2.dp,
                             color = Green,
@@ -416,23 +420,23 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                BottomNavHome(
+                BottomNav(
                     iconResId = R.drawable.books,
                     labelResId = R.string.modul,
                     isSelected = false,
                     onClick = { navController.navigate("list_module") }
                 )
-                BottomNavHome(
+                BottomNav(
                     iconResId = R.drawable.home_button_white,
                     labelResId = R.string.home,
                     isSelected = true,
                     onClick = { navController.navigate("home_screen") }
                 )
-                BottomNavHome(
+                BottomNav(
                     iconResId = R.drawable.book_stand,
-                    labelResId = R.string.modul,
+                    labelResId = R.string.tabel,
                     isSelected = false,
-                    onClick = { navController.navigate("glosarium_screen") }
+                    onClick = { navController.navigate("table_screen") }
                 )
             }
         }

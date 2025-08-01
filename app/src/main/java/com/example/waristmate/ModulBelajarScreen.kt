@@ -87,41 +87,6 @@ fun BabItem(
     }
 }
 
-
-@Composable
-fun BottomNavModul(
-    iconResId: Int,
-    labelResId: Int,
-    isSelected: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = modifier
-            .clip(RoundedCornerShape(18.dp))
-            .background(if (isSelected) DarkGreen else Green)
-            .width(120.dp)
-            .height(60.dp)
-            .padding(top = 5.dp)
-            .clickable(onClick = onClick)
-    ) {
-        Image(
-            painter = painterResource(id = iconResId),
-            contentDescription = stringResource(id = labelResId),
-            modifier = Modifier.size(32.dp)
-        )
-        Text(
-            text = stringResource(id = labelResId),
-            color = Whites,
-            fontWeight = FontWeight.Medium,
-            fontSize = 10.sp,
-            lineHeight = 1.sp
-        )
-    }
-}
-
 @Composable
 fun ModulBelajarScreen(
     navController: NavController,
@@ -208,23 +173,23 @@ fun ModulBelajarScreen(
                 horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                BottomNavModul(
+                BottomNav(
                     iconResId = R.drawable.books,
                     labelResId = R.string.modul,
                     isSelected = true,
                     onClick = { navController.navigate("list_module") }
                 )
-                BottomNavModul(
+                BottomNav(
                     iconResId = R.drawable.home_button_white,
                     labelResId = R.string.home,
                     isSelected = false,
                     onClick = { navController.navigate("home_screen") }
                 )
-                BottomNavModul(
+                BottomNav(
                     iconResId = R.drawable.book_stand,
-                    labelResId = R.string.modul,
+                    labelResId = R.string.tabel,
                     isSelected = false,
-                    onClick = { navController.navigate("glosarium_screen") }
+                    onClick = { navController.navigate("table_screen") }
                 )
             }
         }
